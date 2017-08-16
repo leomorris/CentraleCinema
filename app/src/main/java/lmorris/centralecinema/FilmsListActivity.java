@@ -3,7 +3,6 @@ package lmorris.centralecinema;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -17,8 +16,6 @@ import java.util.List;
 
 public class FilmsListActivity extends AppCompatActivity {
 
-    private static final String TAG = "FilmsListActivity";
-
     private List<JSONObject> data = new ArrayList<>();
 
     @Override
@@ -30,9 +27,8 @@ public class FilmsListActivity extends AppCompatActivity {
 
         String  stringExtra = getIntent().getStringExtra("JSON_ARRAY");
         loadDataFromString(stringExtra);
-        Log.i(TAG, data.toString());
 
-        listView.setAdapter(new FilmAdapter(this, data));
+        listView.setAdapter(new FilmAdapter(FilmsListActivity.this, data));
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id){

@@ -34,7 +34,7 @@ public class LoadingDataActivity extends AppCompatActivity {
         dialog.show();
 
         // Instantiate the RequestQueue
-        RequestQueue queue = Volley.newRequestQueue(this);
+        RequestQueue queue = Volley.newRequestQueue(LoadingDataActivity.this);
 
         // Request a JSONArray from the URL
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(Request.Method.GET, url, null,

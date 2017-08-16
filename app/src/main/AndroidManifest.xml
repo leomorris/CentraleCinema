@@ -18,8 +18,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FilmsListActivity"></activity>
-        <activity android:name=".FilmsDetailsActivity"></activity>
+        <activity android:name=".FilmsListActivity" />
+        <activity android:name=".FilmsDetailsActivity" />
+        <activity android:name=".PhotoActivity"></activity>
     </application>
 
 </manifest>
